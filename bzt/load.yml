@@ -1,0 +1,11 @@
+execution:
+  - executor: "jmeter"         # Use Taurus’s JMeter executor
+    concurrency: 100            # Simulate 100 virtual users
+    ramp-up: 10s               # Ramp all 100 users over 10 seconds
+    hold-for: 1m               # Maintain 100 users for 1 minute
+    scenario: "load_scenario"   # Reference the scenario below
+scenarios:
+  load_scenario:
+    default-address: "<REPLACE ME>"
+    requests:
+      - "/"
