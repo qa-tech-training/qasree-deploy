@@ -6,6 +6,6 @@ execution:
     scenario: "load_scenario"   # Reference the scenario below
 scenarios:
   load_scenario:
-    default-address: "<REPLACE ME>"
+    default-address: "http://<HOST>:80"
     requests:
       - "/"
