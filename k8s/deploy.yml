@@ -20,7 +20,7 @@ spec:
         app: devops-webapp
     spec:
       containers:
-      - image: ...
+      - image: <IMAGE_TAG>
         name: webapp
         ...
 ---
