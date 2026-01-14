@@ -1,0 +1,12 @@
+---
+apiVersion: chaostoolkit.org/v1
+kind: ChaosToolkitExperiment
+metadata:
+  name: my-chaos-exp
+  namespace: chaostoolkit-crd
+spec:
+  namespace: webapp
+  pod:
+    image: chaostoolkit/chaostoolkit:full
+    experiment:
+      configMapName: chaos-exp 
