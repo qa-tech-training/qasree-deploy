@@ -2,7 +2,7 @@
 apiVersion: chaostoolkit.org/v1
 kind: ChaosToolkitExperiment
 metadata:
-  name: my-chaos-exp
+  name: validate-deploy-resilience-<BUILD>
   namespace: chaostoolkit-crd
 spec:
   namespace: webapp
