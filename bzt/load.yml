@@ -8,4 +8,4 @@ scenarios:
   load_scenario:
     default-address: "http://<HOST>:80"
     requests:
-      - "/"
+      - "/webapp/home"
