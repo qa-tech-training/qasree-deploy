@@ -5,30 +5,23 @@ metadata:
   name: webapp
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: Pod
 metadata:
-  name: webapp-deploy
+  name: webapp-pod
   namespace: webapp
+  labels:
+    app: devops-webapp
 spec:
-  replicas: 10
-  selector:
-    matchLabels:
-      app: devops-webapp
-  template:
-    metadata:
-      labels:
-        app: devops-webapp
-    spec:
-      containers:
-      - image: <IMAGE_TAG>
-        name: webapp
-        env:
-        - name: CONTAINER_NETWORK
-          value: "none"
-        - name: CONTAINER_SOCAT_ENABLED
-          value: "false"
-        ports:
-        - containerPort: 8080
+  containers:
+  - image: <IMAGE_TAG>
+    name: webapp
+    env:
+    - name: CONTAINER_NETWORK
+      value: "none"
+    - name: CONTAINER_SOCAT_ENABLED
+      value: "false"
+    ports:
+    - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
